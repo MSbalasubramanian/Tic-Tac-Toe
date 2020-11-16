@@ -1,0 +1,24 @@
+:root {
+  --Base-font-size : 50% ; /* (8 / 16 )*100 --> 1rem = 8px*/
+
+  /* * Message colors */
+  --Danger-color : #f94144;
+  --Warning-color: #F9C74F;
+  --Sucess-color : #90BE6D;
+  --Information-color : #577590;
+
+  --shadow-color : rgb(204, 204, 204);
+
+  /* *Primary Colors -- Brightness Modification*/
+  --primary-color-76L : hsl(21, 89%, 70%);
+  --primary-color : hsl(21, 89%, 56%);
+  --primary-color-36L : hsl(21, 89%, 30%);
+
+  /* * Secondary colors */
+  --secondary-color-96L : hsl(209, 83%, 96%);
+  --secondary-color : hsl(209, 83%, 77%);
+  --secondary-color-47L : hsl(209, 83%, 47%);
+
+
+
+}

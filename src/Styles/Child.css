@@ -1,0 +1,130 @@
+[class^=child] {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border:2px solid var(--primary-color);
+}
+
+[class^=child]:first-child,
+[class^=child]:nth-child(2),
+[class^=child]:nth-child(3) { /* n ranges from 0 to ...*/   
+  border-top : none;
+}
+[class^=child]:last-child,
+[class^=child]:nth-child(7),
+[class^=child]:nth-child(8) { /* n ranges from 0 to ...*/   
+  border-bottom : none;
+}
+[class^=child]:nth-child(3n + 1) { /* n ranges from 0 to ...*/ 
+  border-left : none;
+}
+[class^=child]:nth-child(3n) { /* n ranges from 0 to ...*/ 
+  border-right : none;
+}
+
+[class^=child].x ,
+[class^=child].c {
+  cursor:url('../Asserts/cursor.png')  ,not-allowed;
+}
+
+/* * X part */
+[class^=child].x::after,
+[class^=child].x::before,
+.Board-grid.x [class^=child]:not(.c):not(.x):hover::after, 
+.Board-grid.x [class^=child]:not(.c):not(.x):hover::before{
+  content : '';
+  width : 5px;
+  height: 30px;
+  background-color: var(--secondary-color-47L);  
+  position: absolute;
+}
+
+[class^=child].x::after,
+.Board-grid.x [class^=child]:not(.c):not(.x):hover::after {
+  transform:rotate(45deg);
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+}
+
+[class^=child].x::before,
+.Board-grid.x [class^=child]:not(.c):not(.x):hover::before {
+  transform:rotate(-45deg);
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+}
+
+
+
+/* * circle part */
+[class^=child].c::after,
+[class^=child].c::before,
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::after, 
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::before {
+  content: '';  
+  background-color: var(--secondary-color-47L);
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+[class^=child].c::after,
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::after {
+  width:30px;
+  height: 30px;
+  background-color: var(--secondary-color-96L);
+}
+
+[class^=child].c::before,
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::before {
+  width: 40px;
+  height: 40px;
+  
+}
+
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::after, 
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::before,
+.Board-grid.c [class^=child]:not(.x):not(.c):hover::before {
+  opacity: .5;
+}
+
+/* * Stike */
+
+[class*=strike]::after {
+  content: '';
+  width:5px;
+  height:200%;
+  background-color: #000;
+  
+}
+
+.strike-LR::after {  
+  transform: rotate(-53.5deg);
+  -webkit-transform: rotate(-53.5deg);
+  -moz-transform: rotate(-53.5deg);
+  -ms-transform: rotate(-53.5deg);
+  -o-transform: rotate(-53.5deg);
+}
+
+.strike-RL::after {
+  transform: rotate(53.5deg);
+  -webkit-transform: rotate(53.5deg);
+  -moz-transform: rotate(53.5deg);
+  -ms-transform: rotate(53.5deg);
+  -o-transform: rotate(53.5deg);
+}
+
+
+.strike-Ver::before {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}

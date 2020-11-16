@@ -1,0 +1,28 @@
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height:80vh;
+  background-color: var(--Secondary-color);
+}
+
+.Board-grid {
+  width:25%;
+  height:35%;  
+  display: grid;
+  grid-template-rows: repeat(3 , 1fr);
+  grid-template-columns: repeat(3 ,1fr);
+ position: relative;
+ cursor: pointer;
+  
+}
+
+
+
+
+
+
